@@ -29,6 +29,9 @@ char check_board(char board[][3]){
     return '_';
 }
 int main(){
+    // srand() function should only be seeded once
+    // This should not be repeatedly seeded or reseeded everytime you wish to generate a new batch of pseudo-random numbers
+    srand(time(0));
     char board[3][3] = {{'_','_','_'}, {'_','_','_'}, {'_','_','_'}};
     char players[2] = {'X','O'};
     cout << "Welcome to Tick Tack Toe Game" << endl;
